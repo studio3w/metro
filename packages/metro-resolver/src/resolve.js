@@ -103,6 +103,9 @@ function resolve(
   ) {
     const searchPath = path.join(currDir, 'node_modules');
     dirPaths.push(path.join(searchPath, realModuleName));
+    
+    const searchPath2 = path.join(currDir, 'shared');
+    dirPaths.push(path.join(searchPath2, realModuleName));
   }
 
   const extraPaths = [];
